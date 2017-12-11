@@ -6,60 +6,68 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.quizzcinema.MainActivity">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/cinema_imageView"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="15"
+                android:layout_height="wrap_content"
                 android:src="@drawable/cinema"
                 android:scaleType="centerCrop"/>
 
-                <TextView
+            <TextView
+                android:id="@+id/question_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Emplacement des questions"
+                android:layout_margin="16dp"
+                android:layout_below="@id/cinema_imageView"/>
+
+            <RadioGroup
+                android:id="@+id/rbGroup_radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_textView">
+                <RadioButton
+                    android:id="@+id/answer1_radioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Emplacement des questions"
-                    android:layout_margin="16dp"/>
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2"
                     android:text="reponse1"
                     android:layout_marginLeft="32dp"/>
                 <RadioButton
+                    android:id="@+id/answer2_radioButton"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
                     android:text="reponse2"
                     android:layout_marginTop="8dp"
-                    android:layout_marginLeft="32dp"/>
+                    android:layout_marginLeft="32dp" />
                 <RadioButton
+                    android:id="@+id/answer3_radioButton"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
                     android:text="reponse3"
                     android:layout_marginTop="8dp"
-                    android:layout_marginLeft="32dp"/>
+                    android:layout_marginLeft="32dp" />
                 <RadioButton
+                    android:id="@+id/answer4_radioButton"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
                     android:text="reponse4"
                     android:layout_marginTop="8dp"
-                    android:layout_marginLeft="32dp"/>
+                    android:layout_marginLeft="32dp" />
+            </RadioGroup>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="SUIVANT"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginLeft="16dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUIVANT"
+                android:layout_margin="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/rbGroup_radioGroup"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
 </android.widget.ScrollView>
