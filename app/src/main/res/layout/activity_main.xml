@@ -1,74 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context="com.example.android.quizzcinema.MainActivity">
+    tools:context="com.example.android.quizzcinema.MainActivity"
+    android:background="#B3E5FC">
 
-        <RelativeLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/cinema_imageView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:scaleType="centerCrop"/>
 
-            <ImageView
-                android:id="@+id/cinema_imageView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/cinema"
-                android:scaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/question_textView"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@color/colorWhite"/>
 
-            <TextView
-                android:id="@+id/question_textView"
+        <ProgressBar
+            android:id="@+id/pgBar_progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:progress="0"
+            android:max="10"
+            android:progressBackgroundTint="@color/colorWhite"
+            android:progressTint="@color/colorPrimary"/>
+
+        <RadioGroup
+            android:id="@+id/rbGroup_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_margin="16dp">
+            <RadioButton
+                android:id="@+id/answer1_radioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:layout_margin="16dp"
-                android:layout_below="@id/cinema_imageView"/>
-
-            <RadioGroup
-                android:id="@+id/rbGroup_radioGroup"
+                android:layout_marginLeft="32dp"/>
+            <RadioButton
+                android:id="@+id/answer2_radioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/question_textView">
-                <RadioButton
-                    android:id="@+id/answer1_radioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:layout_marginLeft="32dp"/>
-                <RadioButton
-                    android:id="@+id/answer2_radioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:layout_marginTop="8dp"
-                    android:layout_marginLeft="32dp" />
-                <RadioButton
-                    android:id="@+id/answer3_radioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:layout_marginTop="8dp"
-                    android:layout_marginLeft="32dp" />
-                <RadioButton
-                    android:id="@+id/answer4_radioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:layout_marginTop="8dp"
-                    android:layout_marginLeft="32dp" />
-            </RadioGroup>
-
-            <Button
-                android:id="@+id/suivant_button"
-                android:layout_width="wrap_content"
+                android:text=""
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="32dp" />
+            <RadioButton
+                android:id="@+id/answer3_radioButton"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SUIVANT"
-                android:layout_margin="16dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:onClick="verifReponse"/>
+                android:text=""
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="32dp" />
+            <RadioButton
+                android:id="@+id/answer4_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="32dp" />
+        </RadioGroup>
+        <Button
+            android:id="@+id/suivant_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUIVANT"
+            android:layout_margin="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:onClick="verifReponse"
+            android:background="@drawable/button"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
 
-        </RelativeLayout>
-
-</android.widget.ScrollView>
+</android.widget.LinearLayout>
