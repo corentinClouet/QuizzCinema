@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Quizz Cinema</string>
+    <string name="app_name" translatable="false">Quizz Cinema</string>
+    <string name="next_button">SUIVANT</string>
 </resources>

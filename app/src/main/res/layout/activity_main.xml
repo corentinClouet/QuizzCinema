@@ -76,13 +76,12 @@
             android:id="@+id/suivant_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SUIVANT"
+            android:text="@string/next_button"
             android:layout_margin="16dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
             android:onClick="verifReponse"
             android:background="@drawable/button"
-            android:textColor="@color/colorWhite"/>
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="right"/>
     </LinearLayout>
 
 </android.widget.LinearLayout>
